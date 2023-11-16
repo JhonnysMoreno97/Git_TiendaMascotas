@@ -10,3 +10,19 @@ function changeHeaderColor() {
 }
 // Agregar evento al botón para cambiar el color del encabezado al hacer clic
 changeColorButton.addEventListener('click', changeHeaderColor);
+
+// Obtenemos el elemento del encabezado
+const header = document.getElementById('headerTitle');
+
+// Función para animación al hacer hover
+function scaleHeader() {
+    header.style.transform = 'scale(1.2)'; 
+}
+
+function resetHeader() {
+    header.style.transform = 'scale(1)'; 
+}
+
+// Agregamos eventos al hacer hover y al salir del hover
+header.addEventListener('mouseenter', scaleHeader);
+header.addEventListener('mouseleave', resetHeader);

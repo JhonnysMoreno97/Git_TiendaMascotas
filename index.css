@@ -25,6 +25,7 @@ header {
     color: #0336ff;
     padding: 0; /* Se ajustó el padding */
     text-align: center;
+    transition: transform 0.3s ease;
     
 }
 
@@ -84,10 +85,12 @@ header {
     cursor: pointer;
 }
 
+
 .header-content {
     text-align: center;
     transition: background-color 0.3s ease; /* Agregamos transición */
 }
+
 
 .header-content h1 {
     font-size: 75px;
