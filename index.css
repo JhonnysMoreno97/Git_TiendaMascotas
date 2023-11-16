@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,43 +12,42 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 10;
+    padding: 10px; /* Se añadieron unidades al padding */
 }
 
-.container{
+.container {
     max-width: 1300px;
     margin: 0 auto;
-
 }
 
-header { 
+header {
     background-color: #ffde03;
     color: #0336ff;
-    padding: 0px;
+    padding: 0; /* Se ajustó el padding */
     text-align: center;
+    
 }
 
-.menu{
+.menu {
     position: relative;
     top: 0;
     left: 0;
     right: 0;
-    display: flexbox;
+    display: flex; /* Se corrigió 'flexbox' a 'flex' */
     align-items: center;
     justify-content: space-between;
     font-size: 5px;
-    
 }
 
-.logo{
+.logo {
     color: #ffde03;
     font-size: 25px;
     font-weight: 800;
 }
 
-.menu .navbar ul li{
-  position: relative;
-  float: right;
+.menu .navbar ul li {
+    position: relative;
+    float: right;
 }
 
 .menu .navbar ul li {
@@ -61,44 +60,42 @@ header {
     text-decoration: underline;
 }
 
-.menu .navbar ul li a:hover{
+.menu .navbar ul li a {
+    transition: color 0.3s ease;
+}
+
+.menu .navbar ul li a:hover {
     color: #ce967b;
 }
 
-#menu{
+#menu {
     display: none;
-    
 }
 
-.logo-icono{
+.logo-icono {
     width: 250px;
-    
 }
 
-.menu-icono{
+.menu-icono {
     width: 35px;
-    
 }
 
-.menu label{
+.menu label {
     cursor: pointer;
-    
 }
 
-
-.header-content{
-   text-align: center;
-
+.header-content {
+    text-align: center;
+    transition: background-color 0.3s ease; /* Agregamos transición */
 }
 
-.header-content h1{
+.header-content h1 {
     font-size: 75px;
-    line-height: 80;
+    line-height: 80px; /* Se añadieron unidades a 'line-height' */
     color: #0336ff;
     text-transform: uppercase;
     margin-bottom: 35px;
- }
-
+}
 
 a {
     color: #0336ff;
@@ -109,7 +106,7 @@ section {
     color: #000000;
 }
 
-
+/* Se eliminó la regla .section que no correspondía a ninguna clase */
 
 footer {
     background-color: #ffde03;
@@ -121,8 +118,8 @@ footer {
     width: 100%;
 }
 
-@media(max-width:991px){
-    .menu{
+@media (max-width: 991px) {
+    .menu {
         padding: 30px;
     }
 
@@ -130,34 +127,44 @@ footer {
         display: initial;
     }
 
-    .menu .navbar{
+    .menu .navbar {
         position: absolute;
         top: 100%;
         left: 0;
         right: 0%;
         background-color: #000000;
         display: none;
+        transition: all 0.3s ease;
+        opacity: 0;
+        pointer-events: none;
     }
 
-    .menu .navbar ul li{
+
+    .menu .navbar ul li {
         width: 100%;
     }
 
     #menu:checked ~ .navbar {
         display: initial;
-
     }
 
-    .header{
+    .menu #menu:checked ~ .navbar {
+        display: block;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+    .header {
         min-height: 0vh;
     }
 
-    .header-content{
+    .header-content {
         padding: 100% 30px;
     }
 
-    .section{
-        padding: 0%;
-
+    section {
+        padding: 0%; /* Se ajustó el padding */
     }
 }
+
