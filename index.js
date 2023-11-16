@@ -12,17 +12,17 @@ function changeHeaderColor() {
 changeColorButton.addEventListener('click', changeHeaderColor);
 
 // Obtenemos el elemento del encabezado
-const header = document.getElementById('headerTitle');
+const headerTitle = document.getElementById('headerTitle');
 
 // Función para animación al hacer hover
 function scaleHeader() {
-    header.style.transform = 'scale(1.2)'; 
+    headerTitle.style.transform = 'scale(1.2)'
 }
 
 function resetHeader() {
-    header.style.transform = 'scale(1)'; 
+    headerTitle.style.transform = 'scale(1)'; 
 }
 
 // Agregamos eventos al hacer hover y al salir del hover
-header.addEventListener('mouseenter', scaleHeader);
-header.addEventListener('mouseleave', resetHeader);
+headerTitle.addEventListener('mouseenter', scaleHeader);
+headerTitle.addEventListener('mouseleave', resetHeader);
